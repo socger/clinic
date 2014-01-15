@@ -1,0 +1,16 @@
+object CoreDataModule: TCoreDataModule
+  OldCreateOrder = False
+  Height = 233
+  HorizontalOffset = 729
+  VerticalOffset = 225
+  Width = 268
+  object SQLite3Connect: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    LogEvents = []
+    Options = []
+    left = 72
+    top = 16
+  end
+end

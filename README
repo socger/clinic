@@ -1,0 +1,28 @@
+clinic
+=============
+Проект для управления базой данных пациентов амбулаторного учреждения.
+
+Поддерживаемые ОС:
+=============
+Lubuntu GNU/Linux 13.04+,
+Windows XP+
+
+fpc 2.6.0+, Lazarus 0.9.30.4+, sqlite3
+
+TODO:
+=============
+ * http://wiki.freepascal.org/SQLite
+ * http://wiki.freepascal.org/SQLdb_Tutorial1
+ * http://forum.lazarus.freepascal.org/index.php?topic=16852.0
+ * http://freepascal.ru/forum/viewtopic.php?f=5&t=9614
+ * http://freepascal.ru/forum/viewtopic.php?f=5&t=9536
+ * http://freepascal.ru/forum/viewtopic.php?f=5&t=9510
+ * http://freepascal.ru/forum/viewtopic.php?f=5&t=2185
+ * http://freepascal.ru/forum/viewtopic.php?f=5&t=9247
+ * http://freepascal.ru/forum/viewtopic.php?f=5&t=9226
+ * http://freepascal.ru/forum/viewtopic.php?f=26&t=8570
+ * http://freepascal.ru/forum/viewtopic.php?f=2&t=8177
+
+15.01.2014 - версия 0.1
+========================
+ * Структура проекта, иконка;

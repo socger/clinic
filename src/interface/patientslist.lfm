@@ -1,0 +1,19 @@
+object PatientsListForm: TPatientsListForm
+  Left = 506
+  Height = 318
+  Top = 348
+  Width = 849
+  Caption = 'PatientsListForm'
+  ClientHeight = 318
+  ClientWidth = 849
+  LCLVersion = '0.9.30.4'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 104
+    Top = 8
+    Width = 336
+    Color = clWindow
+    Columns = <>
+    TabOrder = 0
+  end
+end
