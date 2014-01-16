@@ -6,8 +6,8 @@ unit patientsList;
 interface
 
 uses
-  Classes, SysUtils, sqlite3conn, FileUtil, Forms, Controls, Graphics, Dialogs,
-  DBGrids;
+  Classes, SysUtils, sqlite3conn, sqldb, db, FileUtil, Forms, Controls,
+  Graphics, Dialogs, DBGrids;
 
 type
 
@@ -15,6 +15,8 @@ type
 
   TPatientsListForm = class(TForm)
     DBGrid1: TDBGrid;
+    dsPatientsList: TDatasource;
+    sqlPatientsList: TSQLQuery;
   private
     { private declarations }
   public

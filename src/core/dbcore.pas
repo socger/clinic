@@ -6,14 +6,15 @@ unit dbCore;
 interface
 
 uses
-  Classes, SysUtils, sqlite3conn, FileUtil;
+  Classes, SysUtils, sqlite3conn, sqldb, db, FileUtil;
 
 type
 
   { TCoreDataModule }
 
   TCoreDataModule = class(TDataModule)
-  SQLite3Connect: TSQLite3Connection;
+  mSQLite3Connection: TSQLite3Connection;
+  mSQLTransaction: TSQLTransaction;
   private
     { private declarations }
   public

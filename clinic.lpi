@@ -32,14 +32,18 @@
         <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="2">
+    <RequiredPackages Count="3">
       <Item1>
-        <PackageName Value="SQLDBLaz"/>
-        <MinVersion Major="1" Release="1" Valid="True"/>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
       </Item1>
       <Item2>
-        <PackageName Value="LCL"/>
+        <PackageName Value="SQLDBLaz"/>
+        <MinVersion Major="1" Release="1" Valid="True"/>
       </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
     </RequiredPackages>
     <Units Count="3">
       <Unit0>
@@ -50,7 +54,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="23" Y="17"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="53"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -60,12 +64,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dbCore"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="24" Y="12"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -76,16 +79,17 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="patientsList"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="30" Y="1"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="33" Y="12"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
     </Units>
-    <JumpHistory Count="3" HistoryIndex="2">
+    <JumpHistory Count="5" HistoryIndex="4">
       <Position1>
         <Filename Value="clinic.lpr"/>
         <Caret Line="17" Column="36" TopLine="1"/>
@@ -98,6 +102,14 @@
         <Filename Value="clinic.lpr"/>
         <Caret Line="18" Column="45" TopLine="1"/>
       </Position3>
+      <Position4>
+        <Filename Value="src/core/dbcore.pas"/>
+        <Caret Line="12" Column="24" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="1" Column="54" TopLine="1"/>
+      </Position5>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
