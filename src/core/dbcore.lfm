@@ -5,8 +5,9 @@ object CoreDataModule: TCoreDataModule
   VerticalOffset = 225
   Width = 317
   object mSQLite3Connection: TSQLite3Connection
-    Connected = False
+    Connected = True
     LoginPrompt = False
+    DatabaseName = 'clinic.db'
     KeepConnection = False
     Transaction = mSQLTransaction
     LogEvents = []
@@ -15,8 +16,8 @@ object CoreDataModule: TCoreDataModule
     top = 16
   end
   object mSQLTransaction: TSQLTransaction
-    Active = False
-    Action = caNone
+    Active = True
+    Action = caCommit
     Database = mSQLite3Connection
     left = 64
     top = 40

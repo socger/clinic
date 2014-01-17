@@ -50,12 +50,10 @@
         <Filename Value="clinic.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="clinic"/>
-        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="23" Y="17"/>
-        <UsageCount Value="53"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="58"/>
       </Unit0>
       <Unit1>
         <Filename Value="src/core/dbcore.pas"/>
@@ -64,13 +62,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dbCore"/>
-        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="24" Y="12"/>
-        <UsageCount Value="52"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <CursorPos X="31" Y="18"/>
+        <UsageCount Value="57"/>
       </Unit1>
       <Unit2>
         <Filename Value="src/interface/patientslist.pas"/>
@@ -80,42 +75,62 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="patientsList"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="33" Y="12"/>
-        <UsageCount Value="52"/>
+        <CursorPos X="28" Y="16"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
     </Units>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="10" HistoryIndex="9">
       <Position1>
-        <Filename Value="clinic.lpr"/>
-        <Caret Line="17" Column="36" TopLine="1"/>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="15" Column="49" TopLine="1"/>
       </Position1>
       <Position2>
         <Filename Value="src/interface/patientslist.pas"/>
-        <Caret Line="15" Column="49" TopLine="1"/>
+        <Caret Line="1" Column="54" TopLine="1"/>
       </Position2>
       <Position3>
-        <Filename Value="clinic.lpr"/>
-        <Caret Line="18" Column="45" TopLine="1"/>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="12" Column="33" TopLine="1"/>
       </Position3>
       <Position4>
-        <Filename Value="src/core/dbcore.pas"/>
-        <Caret Line="12" Column="24" TopLine="1"/>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="22" Column="22" TopLine="1"/>
       </Position4>
       <Position5>
         <Filename Value="src/interface/patientslist.pas"/>
-        <Caret Line="1" Column="54" TopLine="1"/>
+        <Caret Line="23" Column="22" TopLine="1"/>
       </Position5>
+      <Position6>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="22" Column="22" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="24" Column="22" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="44" Column="10" TopLine="8"/>
+      </Position8>
+      <Position9>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="42" Column="20" TopLine="8"/>
+      </Position9>
+      <Position10>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="10" Column="30" TopLine="1"/>
+      </Position10>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="9"/>
     <Target>
-      <Filename Value="out/clinic"/>
+      <Filename Value="build/clinic"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

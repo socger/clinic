@@ -7,16 +7,18 @@ interface
 
 uses
   Classes, SysUtils, sqlite3conn, sqldb, db, FileUtil, Forms, Controls,
-  Graphics, Dialogs, DBGrids;
+  Graphics, Dialogs, DBGrids, StdCtrls;
 
 type
 
   { TPatientsListForm }
 
   TPatientsListForm = class(TForm)
+    Button1: TButton;
     DBGrid1: TDBGrid;
     dsPatientsList: TDatasource;
     sqlPatientsList: TSQLQuery;
+    procedure Button1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -28,9 +30,21 @@ var
 
 implementation
 
+uses dbCore;
+
 {$R *.lfm}
 
 { TPatientsListForm }
+
+// тестовое соединение с БД
+procedure TPatientsListForm.Button1Click(Sender: TObject);
+begin
+  sqlPatientsList.Close;
+  sqlPatientsList.SQL.Text:= 'select * from patients_view;';
+  CoreDataModule.mSQLite3Connection.Connected:= True;
+  CoreDataModule.mSQLTransaction.Active:= True;
+  sqlPatientsList.Open;
+end;
 
 end.
 

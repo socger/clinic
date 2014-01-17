@@ -9,17 +9,30 @@ object PatientsListForm: TPatientsListForm
   LCLVersion = '0.9.30.4'
   object DBGrid1: TDBGrid
     Left = 8
-    Height = 104
+    Height = 192
     Top = 8
-    Width = 336
+    Width = 832
     Color = clWindow
     Columns = <>
     DataSource = dsPatientsList
     TabOrder = 0
   end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 208
+    Width = 75
+    Caption = 'db-test'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
   object sqlPatientsList: TSQLQuery
     FieldDefs = <>
+    Database = CoreDataModule.mSQLite3Connection
     Transaction = CoreDataModule.mSQLTransaction
+    SQL.Strings = (
+      'SELECT * FROM patients_view;'
+    )
     Params = <>
     left = 56
     top = 232
