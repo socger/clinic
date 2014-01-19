@@ -4,24 +4,15 @@ clinic
 
 Поддерживаемые ОС:
 =============
-Lubuntu GNU/Linux 13.04+,
-Windows XP+
+Lubuntu GNU/Linux 13.10+
 
-fpc 2.6.0+, Lazarus 0.9.30.4+, sqlite3
-
-TODO:
+Системные требования:
+(Разработка ведётся на Lubuntu 13.10 x86_64)
 =============
- * http://wiki.freepascal.org/SQLite
- * http://wiki.freepascal.org/SQLdb_Tutorial1
- * http://forum.lazarus.freepascal.org/index.php?topic=16852.0
- * http://freepascal.ru/forum/viewtopic.php?f=5&t=9614
- * http://freepascal.ru/forum/viewtopic.php?f=5&t=9536
- * http://freepascal.ru/forum/viewtopic.php?f=5&t=9510
- * http://freepascal.ru/forum/viewtopic.php?f=5&t=2185
- * http://freepascal.ru/forum/viewtopic.php?f=5&t=9247
- * http://freepascal.ru/forum/viewtopic.php?f=5&t=9226
- * http://freepascal.ru/forum/viewtopic.php?f=26&t=8570
- * http://freepascal.ru/forum/viewtopic.php?f=2&t=8177
+ * fpc 2.6.2-5 (apt-get install fpc);
+ * sqlite3 (apt-get install sqlite3 libsqlite3-dev)
+ * Lazarus 1.3 (svn r43678+);
+ * RxLib (svn r2887+);
 
 15.01.2014 - версия 0.1
 ========================
