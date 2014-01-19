@@ -1,7 +1,7 @@
 object PatientsListForm: TPatientsListForm
-  Left = 506
+  Left = 405
   Height = 318
-  Top = 348
+  Top = 260
   Width = 849
   Caption = 'PatientsListForm'
   ClientHeight = 318
@@ -30,8 +30,8 @@ object PatientsListForm: TPatientsListForm
         Title.Orientation = toHorizontal
         Width = 70
         FieldName = 'l_name'
-        Constraints.MinWidth = 20
-        Constraints.MaxWidth = 70
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
         Filter.DropDownRows = 0
         Filter.EmptyValue = '(Нет)'
         Filter.EmptyFont.Style = [fsItalic]
@@ -42,7 +42,182 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Имя'
         Title.Orientation = toHorizontal
+        Width = 150
         FieldName = 'f_name'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Отчество'
+        Title.Orientation = toHorizontal
+        Width = 150
+        FieldName = 'm_name'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Пол'
+        Title.Orientation = toHorizontal
+        Width = 40
+        FieldName = 'gender'
+        Constraints.MinWidth = 20
+        Constraints.MaxWidth = 40
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Дата рождения'
+        Title.Orientation = toHorizontal
+        FieldName = 'dob'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 120
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'нас. пункт'
+        Title.Orientation = toHorizontal
+        FieldName = 'locality'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'улица'
+        Title.Orientation = toHorizontal
+        FieldName = 'street'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'дом'
+        Title.Orientation = toHorizontal
+        FieldName = 'house'
+        Constraints.MinWidth = 20
+        Constraints.MaxWidth = 40
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'квартира'
+        Title.Orientation = toHorizontal
+        Width = 40
+        FieldName = 'flat'
+        Constraints.MinWidth = 20
+        Constraints.MaxWidth = 40
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'телефон'
+        Title.Orientation = toHorizontal
+        FieldName = 'pnone'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 100
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'примечание'
+        Title.Orientation = toHorizontal
+        FieldName = 'note'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'флюорограф'
+        Title.Orientation = toHorizontal
+        FieldName = 'fluorograph'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'ВГД'
+        Title.Orientation = toHorizontal
+        FieldName = 'vgd'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'онкоцитология'
+        Title.Orientation = toHorizontal
+        FieldName = 'oncocitology'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'д.учёт'
+        Title.Orientation = toHorizontal
+        FieldName = 'dispensary'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
         Filter.DropDownRows = 0
@@ -122,43 +297,42 @@ object PatientsListForm: TPatientsListForm
     TabOrder = 1
   end
   object sqlPatientsList: TSQLQuery
-    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'l_name'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'f_name'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'm_name'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'gender'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'dob'
-        DataType = ftDate
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'note'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'locality'
@@ -186,35 +360,34 @@ object PatientsListForm: TPatientsListForm
       end    
       item
         Name = 'phone'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'fluorograph'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'vgd'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'oncocitology'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end    
       item
         Name = 'dispensary'
-        DataType = ftMemo
+        DataType = ftString
         Precision = -1
-        Size = 0
+        Size = 255
       end>
-    Active = True
     Database = CoreDataModule.mSQLite3Connection
     Transaction = CoreDataModule.mSQLTransaction
     SQL.Strings = (
