@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
     <Version Value="9"/>
@@ -29,21 +29,26 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="3">
+    <RequiredPackages Count="5">
       <Item1>
-        <PackageName Value="FCL"/>
-        <MinVersion Major="1" Valid="True"/>
+        <PackageName Value="rx_sort_sqldb"/>
       </Item1>
       <Item2>
-        <PackageName Value="SQLDBLaz"/>
-        <MinVersion Major="1" Release="1" Valid="True"/>
+        <PackageName Value="rxnew"/>
       </Item2>
       <Item3>
-        <PackageName Value="LCL"/>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
       </Item3>
+      <Item4>
+        <PackageName Value="SQLDBLaz"/>
+        <MinVersion Major="1" Release="1" Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
     </RequiredPackages>
     <Units Count="3">
       <Unit0>
@@ -53,7 +58,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="23" Y="17"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="65"/>
       </Unit0>
       <Unit1>
         <Filename Value="src/core/dbcore.pas"/>
@@ -62,10 +67,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dbCore"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="31" Y="18"/>
-        <UsageCount Value="57"/>
+        <CursorPos X="47" Y="10"/>
+        <UsageCount Value="64"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="src/interface/patientslist.pas"/>
@@ -77,14 +85,14 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="28" Y="16"/>
-        <UsageCount Value="57"/>
+        <TopLine Value="5"/>
+        <CursorPos X="40" Y="10"/>
+        <UsageCount Value="64"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
     </Units>
-    <JumpHistory Count="10" HistoryIndex="9">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
         <Filename Value="src/interface/patientslist.pas"/>
         <Caret Line="15" Column="49" TopLine="1"/>
@@ -125,10 +133,54 @@
         <Filename Value="src/interface/patientslist.pas"/>
         <Caret Line="10" Column="30" TopLine="1"/>
       </Position10>
+      <Position11>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="18" Column="30" TopLine="18"/>
+      </Position11>
+      <Position12>
+        <Filename Value="src/core/dbcore.pas"/>
+        <Caret Line="11" Column="19" TopLine="1"/>
+      </Position12>
+      <Position13>
+        <Filename Value="src/core/dbcore.pas"/>
+        <Caret Line="8" Column="26" TopLine="1"/>
+      </Position13>
+      <Position14>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="24" Column="64" TopLine="18"/>
+      </Position14>
+      <Position15>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="23" Column="64" TopLine="16"/>
+      </Position15>
+      <Position16>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="24" Column="64" TopLine="16"/>
+      </Position16>
+      <Position17>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="27" Column="64" TopLine="16"/>
+      </Position17>
+      <Position18>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="50" Column="5" TopLine="20"/>
+      </Position18>
+      <Position19>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="22" Column="45" TopLine="5"/>
+      </Position19>
+      <Position20>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="18" Column="74" TopLine="6"/>
+      </Position20>
+      <Position21>
+        <Filename Value="src/interface/patientslist.pas"/>
+        <Caret Line="34" Column="12" TopLine="17"/>
+      </Position21>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
-    <Version Value="9"/>
+    <Version Value="11"/>
     <Target>
       <Filename Value="build/clinic"/>
     </Target>
@@ -172,4 +224,5 @@
       </Item3>
     </Exceptions>
   </Debugging>
+  <EditorMacros Count="0"/>
 </CONFIG>

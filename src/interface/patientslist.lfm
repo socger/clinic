@@ -6,17 +6,7 @@ object PatientsListForm: TPatientsListForm
   Caption = 'PatientsListForm'
   ClientHeight = 318
   ClientWidth = 849
-  LCLVersion = '0.9.30.4'
-  object DBGrid1: TDBGrid
-    Left = 8
-    Height = 192
-    Top = 8
-    Width = 832
-    Color = clWindow
-    Columns = <>
-    DataSource = dsPatientsList
-    TabOrder = 0
-  end
+  LCLVersion = '1.3'
   object Button1: TButton
     Left = 8
     Height = 25
@@ -24,14 +14,211 @@ object PatientsListForm: TPatientsListForm
     Width = 75
     Caption = 'db-test'
     OnClick = Button1Click
+    TabOrder = 0
+  end
+  object RxDBGrid1: TRxDBGrid
+    Left = 0
+    Height = 184
+    Top = 0
+    Width = 849
+    TitleButtons = False
+    AutoSort = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Фамилия'
+        Title.Orientation = toHorizontal
+        Width = 70
+        FieldName = 'l_name'
+        Constraints.MinWidth = 20
+        Constraints.MaxWidth = 70
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Имя'
+        Title.Orientation = toHorizontal
+        FieldName = 'f_name'
+        Constraints.MinWidth = 50
+        Constraints.MaxWidth = 150
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Нет)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        EditButtons = <>
+      end>
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.Active = True
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgFooterRows, rdgAllowQuickFilter]
+    Align = alTop
+    AutoEdit = False
+    Color = clWindow
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    GridLineStyle = psSolid
+    DataSource = dsPatientsList
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentColor = False
     TabOrder = 1
   end
   object sqlPatientsList: TSQLQuery
-    FieldDefs = <>
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'l_name'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'f_name'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'm_name'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'gender'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'dob'
+        DataType = ftDate
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'note'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'locality'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'street'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'house'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'flat'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'phone'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'fluorograph'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'vgd'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'oncocitology'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'dispensary'
+        DataType = ftMemo
+        Precision = -1
+        Size = 0
+      end>
+    Active = True
     Database = CoreDataModule.mSQLite3Connection
     Transaction = CoreDataModule.mSQLTransaction
     SQL.Strings = (
-      'SELECT * FROM patients_view;'
+      'select * from patients_view;'
     )
     Params = <>
     left = 56
@@ -41,5 +228,9 @@ object PatientsListForm: TPatientsListForm
     DataSet = sqlPatientsList
     left = 56
     top = 248
+  end
+  object RxSortSqlDB1: TRxSortSqlDB
+    left = 160
+    top = 232
   end
 end

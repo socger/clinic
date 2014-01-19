@@ -7,7 +7,7 @@ interface
 
 uses
   Classes, SysUtils, sqlite3conn, sqldb, db, FileUtil, Forms, Controls,
-  Graphics, Dialogs, DBGrids, StdCtrls;
+  Graphics, Dialogs, DBGrids, StdCtrls, rxdbgrid, RxSortSqlDB;
 
 type
 
@@ -15,8 +15,9 @@ type
 
   TPatientsListForm = class(TForm)
     Button1: TButton;
-    DBGrid1: TDBGrid;
     dsPatientsList: TDatasource;
+    RxDBGrid1: TRxDBGrid;
+    RxSortSqlDB1: TRxSortSqlDB;
     sqlPatientsList: TSQLQuery;
     procedure Button1Click(Sender: TObject);
   private

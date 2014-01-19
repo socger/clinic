@@ -1,25 +1,25 @@
 object CoreDataModule: TCoreDataModule
   OldCreateOrder = False
   Height = 126
-  HorizontalOffset = 710
-  VerticalOffset = 225
+  HorizontalOffset = 633
+  VerticalOffset = 296
   Width = 317
   object mSQLite3Connection: TSQLite3Connection
-    Connected = True
+    Connected = False
     LoginPrompt = False
     DatabaseName = 'clinic.db'
     KeepConnection = False
     Transaction = mSQLTransaction
     LogEvents = []
     Options = []
-    left = 64
+    left = 56
     top = 16
   end
   object mSQLTransaction: TSQLTransaction
-    Active = True
-    Action = caCommit
+    Active = False
+    Action = caNone
     Database = mSQLite3Connection
-    left = 64
-    top = 40
+    left = 56
+    top = 32
   end
 end
