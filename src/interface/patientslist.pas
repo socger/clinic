@@ -17,7 +17,7 @@ type
     Button1: TButton;
     dsPatientsList: TDatasource;
     RxDBGrid1: TRxDBGrid;
-    RxSortSqlDB1: TRxSortSqlDB;
+    mRxSortSqlDB: TRxSortSqlDB;
     sqlPatientsList: TSQLQuery;
     procedure Button1Click(Sender: TObject);
   private

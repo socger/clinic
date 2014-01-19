@@ -21,14 +21,14 @@ object PatientsListForm: TPatientsListForm
     Height = 184
     Top = 0
     Width = 849
-    TitleButtons = False
+    TitleButtons = True
     AutoSort = True
     Columns = <    
       item
         Title.Alignment = taCenter
         Title.Caption = 'Фамилия'
         Title.Orientation = toHorizontal
-        Width = 70
+        Width = 54
         FieldName = 'l_name'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -42,7 +42,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Имя'
         Title.Orientation = toHorizontal
-        Width = 150
+        Width = 54
         FieldName = 'f_name'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -56,7 +56,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Отчество'
         Title.Orientation = toHorizontal
-        Width = 150
+        Width = 54
         FieldName = 'm_name'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -86,6 +86,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Дата рождения'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'dob'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 120
@@ -99,6 +100,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'нас. пункт'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'locality'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -112,6 +114,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'улица'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'street'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -125,6 +128,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'дом'
         Title.Orientation = toHorizontal
+        Width = 40
         FieldName = 'house'
         Constraints.MinWidth = 20
         Constraints.MaxWidth = 40
@@ -152,6 +156,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'телефон'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'pnone'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 100
@@ -165,6 +170,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'примечание'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'note'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -178,6 +184,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'флюорограф'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'fluorograph'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -191,6 +198,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'ВГД'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'vgd'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -204,6 +212,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'онкоцитология'
         Title.Orientation = toHorizontal
+        Width = 54
         FieldName = 'oncocitology'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -283,20 +292,25 @@ object PatientsListForm: TPatientsListForm
         Enabled = True
       end>
     FooterOptions.Active = True
+    FooterOptions.Color = clSkyBlue
+    FooterOptions.RowCount = 1
     OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgFooterRows, rdgAllowQuickFilter]
+    FooterColor = clSkyBlue
+    FooterRowCount = 1
     Align = alTop
     AutoEdit = False
     Color = clWindow
     DrawFullLine = False
-    FocusColor = clRed
+    FocusColor = clSkyBlue
     SelectedColor = clHighlight
     GridLineStyle = psSolid
     DataSource = dsPatientsList
-    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
     ParentColor = False
     TabOrder = 1
   end
   object sqlPatientsList: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'l_name'
@@ -388,6 +402,7 @@ object PatientsListForm: TPatientsListForm
         Precision = -1
         Size = 255
       end>
+    Active = True
     Database = CoreDataModule.mSQLite3Connection
     Transaction = CoreDataModule.mSQLTransaction
     SQL.Strings = (
@@ -402,8 +417,8 @@ object PatientsListForm: TPatientsListForm
     left = 56
     top = 248
   end
-  object RxSortSqlDB1: TRxSortSqlDB
-    left = 160
-    top = 232
+  object mRxSortSqlDB: TRxSortSqlDB
+    left = 152
+    top = 224
   end
 end
