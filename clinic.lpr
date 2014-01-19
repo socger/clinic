@@ -7,15 +7,15 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, patientsList, dbcore
+  Forms, rxnew, patientsList, dbcore
   { you can add units after this };
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TPatientsListForm, PatientsListForm);
   Application.CreateForm(TCoreDataModule, CoreDataModule);
+  Application.CreateForm(TPatientsListForm, PatientsListForm);
   Application.Run;
 end.
 
