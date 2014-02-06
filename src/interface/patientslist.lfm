@@ -30,6 +30,9 @@ object PatientsListForm: TPatientsListForm
         Title.Orientation = toHorizontal
         Width = 54
         FieldName = 'l_name'
+        Footer.Alignment = taRightJustify
+        Footer.DisplayFormat = 'Всего: %d'
+        Footer.ValueType = fvtCount
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
         Filter.DropDownRows = 0
