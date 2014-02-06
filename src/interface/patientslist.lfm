@@ -310,7 +310,6 @@ object PatientsListForm: TPatientsListForm
     TabOrder = 1
   end
   object sqlPatientsList: TSQLQuery
-    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'l_name'
@@ -402,7 +401,6 @@ object PatientsListForm: TPatientsListForm
         Precision = -1
         Size = 255
       end>
-    Active = True
     Database = CoreDataModule.mSQLite3Connection
     Transaction = CoreDataModule.mSQLTransaction
     SQL.Strings = (

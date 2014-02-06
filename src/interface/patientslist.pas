@@ -41,7 +41,7 @@ uses dbCore;
 procedure TPatientsListForm.Button1Click(Sender: TObject);
 begin
   sqlPatientsList.Close;
-  sqlPatientsList.SQL.Text:= 'select * from patients_view;';
+  sqlPatientsList.SQL.Text:= 'select * from patients_view';
   CoreDataModule.mSQLite3Connection.Connected:= True;
   CoreDataModule.mSQLTransaction.Active:= True;
   sqlPatientsList.Open;
