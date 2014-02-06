@@ -308,7 +308,7 @@ object PatientsListForm: TPatientsListForm
     SelectedColor = clHighlight
     GridLineStyle = psSolid
     DataSource = dsPatientsList
-    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgHeaderPushedLook]
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiselect, dgHeaderPushedLook]
     ParentColor = False
     TabOrder = 1
   end
