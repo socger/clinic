@@ -292,10 +292,10 @@ object PatientsListForm: TPatientsListForm
         Enabled = True
       end>
     FooterOptions.Active = True
-    FooterOptions.Color = clSkyBlue
+    FooterOptions.Color = clMenuHighlight
     FooterOptions.RowCount = 1
-    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgFooterRows, rdgAllowQuickFilter]
-    FooterColor = clSkyBlue
+    OptionsRx = [rdgAllowDialogFind, rdgHighlightFocusCol, rdgHighlightFocusRow, rdgFooterRows, rdgAllowQuickSearch, rdgAllowQuickFilter, rdgAllowFilterForm, rdgAllowToolMenu]
+    FooterColor = clMenuHighlight
     FooterRowCount = 1
     Align = alTop
     AutoEdit = False
