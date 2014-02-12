@@ -6,20 +6,20 @@ unit patientsList;
 interface
 
 uses
-  Classes, SysUtils, sqlite3conn, sqldb, db, FileUtil, Forms, Controls,
-  Graphics, Dialogs, DBGrids, StdCtrls, rxdbgrid, RxSortSqlDB;
+  Classes, SysUtils, sqlite3conn, sqldb, DB, FileUtil, Forms, Controls,
+  Graphics, Dialogs, DBGrids, StdCtrls, Menus, ComCtrls, rxdbgrid, RxSortSqlDB,
+  rxtoolbar;
 
 type
 
   { TPatientsListForm }
 
   TPatientsListForm = class(TForm)
-    Button1: TButton;
     dsPatientsList: TDatasource;
     RxDBGrid1: TRxDBGrid;
     mRxSortSqlDB: TRxSortSqlDB;
     sqlPatientsList: TSQLQuery;
-    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { private declarations }
   public
@@ -37,13 +37,12 @@ uses dbCore;
 
 { TPatientsListForm }
 
-// тестовое соединение с БД
-procedure TPatientsListForm.Button1Click(Sender: TObject);
+procedure TPatientsListForm.FormCreate(Sender: TObject);
 begin
   sqlPatientsList.Close;
-  sqlPatientsList.SQL.Text:= 'select * from patients_view';
-  CoreDataModule.mSQLite3Connection.Connected:= True;
-  CoreDataModule.mSQLTransaction.Active:= True;
+  sqlPatientsList.SQL.Text := 'select * from patients_view';
+  CoreDataModule.mSQLite3Connection.Connected := True;
+  CoreDataModule.mSQLTransaction.Active := True;
   sqlPatientsList.Open;
 end;
 

@@ -1,21 +1,13 @@
 object PatientsListForm: TPatientsListForm
-  Left = 405
+  Left = 506
   Height = 318
-  Top = 260
+  Top = 257
   Width = 849
   Caption = 'PatientsListForm'
   ClientHeight = 318
   ClientWidth = 849
+  OnCreate = FormCreate
   LCLVersion = '1.3'
-  object Button1: TButton
-    Left = 8
-    Height = 25
-    Top = 208
-    Width = 75
-    Caption = 'db-test'
-    OnClick = Button1Click
-    TabOrder = 0
-  end
   object RxDBGrid1: TRxDBGrid
     Left = 0
     Height = 184
@@ -28,7 +20,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Фамилия'
         Title.Orientation = toHorizontal
-        Width = 54
+        Width = 70
         FieldName = 'l_name'
         Footer.Alignment = taRightJustify
         Footer.DisplayFormat = 'Всего: %d'
@@ -45,7 +37,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Имя'
         Title.Orientation = toHorizontal
-        Width = 54
+        Width = 150
         FieldName = 'f_name'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -59,7 +51,7 @@ object PatientsListForm: TPatientsListForm
         Title.Alignment = taCenter
         Title.Caption = 'Отчество'
         Title.Orientation = toHorizontal
-        Width = 54
+        Width = 150
         FieldName = 'm_name'
         Constraints.MinWidth = 50
         Constraints.MaxWidth = 150
@@ -310,7 +302,7 @@ object PatientsListForm: TPatientsListForm
     DataSource = dsPatientsList
     Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiselect, dgHeaderPushedLook]
     ParentColor = False
-    TabOrder = 1
+    TabOrder = 0
   end
   object sqlPatientsList: TSQLQuery
     FieldDefs = <    
